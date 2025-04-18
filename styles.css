@@ -1,0 +1,32 @@
+body {
+    background: #f7e7ce;
+    margin: 0;
+}
+
+.block__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5%;
+}
+
+.block__grid__image__element {
+    width: 100%;
+}
+
+.animaton__car {
+    animation: animaton__car 3s ease-in-out 0.5s infinite alternate forwards;
+}
+
+@keyframes animaton__car {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0.1;
+    }
+}
