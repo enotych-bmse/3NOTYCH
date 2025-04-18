@@ -1,5 +1,17 @@
-body {
-    background: #f7e7ce;
+/* ============ FONTS ============ */
+
+
+
+/* ============ GLOBAL PARAMS ============ */
+
+:root {
+    --body-and-logo-color: #f7e7ce;
+}
+
+/* ============ BLOCKS ============ */
+
+.body {
+    background: var(--body-and-logo-color);
     margin: 0;
 }
 
@@ -9,9 +21,43 @@ body {
     gap: 0.5%;
 }
 
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background-image: url("mando.jpg");
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.header__logo {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+}
+
+/* ============ ELEMENTS ============ */
+
 .block__grid__image__element {
     width: 100%;
 }
+
+.header__logo__element {
+    font-size: 300%;
+    color: var(--body-and-logo-color)
+}
+
+/* ============ ANIMATIONS ============ */
 
 .animaton__car {
     animation: animaton__car 3s ease-in-out 0.5s infinite alternate forwards;
@@ -30,3 +76,6 @@ body {
         opacity: 0.1;
     }
 }
+
+
+/* ============ - ============ */
