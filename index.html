@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3NOTYCH</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body class="body">
@@ -68,35 +69,20 @@
                 </div>
             </div>
     
-            <div class="block travelling">
+            <div class="block scroll">
                 <h3>Путешествия</h3>
-                <div class="block__grid"> <!-- изображения с гориз. пролистыванием -->
-
-                    <div class="block__grid__image">
+                <div class="horizontal-scroll-gallery">
+                    <div class="gallery__track"> <!-- изображения с гориз. пролистыванием -->
+                        <img src="example.jpeg" alt="" class="block__grid__image__element">
+                        <img src="example.jpeg" alt="" class="block__grid__image__element">
+                        <img src="example.jpeg" alt="" class="block__grid__image__element">
+                        <img src="example.jpeg" alt="" class="block__grid__image__element">
+                        <img src="example.jpeg" alt="" class="block__grid__image__element">
                         <img src="example.jpeg" alt="" class="block__grid__image__element">
                     </div>
-
-                    <div class="block__grid__image">
-                        <img src="example.jpeg" alt="" class="block__grid__image__element">
-                    </div>
-
-                    <div class="block__grid__image">
-                        <img src="example.jpeg" alt="" class="block__grid__image__element">
-                    </div>
-
-                    <div class="block__grid__image">
-                        <img src="example.jpeg" alt="" class="block__grid__image__element">
-                    </div>
-
-                    <div class="block__grid__image">
-                        <img src="example.jpeg" alt="" class="block__grid__image__element">
-                    </div>
-
-                    <div class="block__grid__image">
-                        <img src="example.jpeg" alt="" class="block__grid__image__element">
-                    </div>
-
                 </div>
+                <button class="scroll-button left" aria-label="Прокрутить влево">влево</button>
+                <button class="scroll-button right" aria-label="Прокрутить вправо">вправо</button>
             </div>
     
             <div class="block codm">
@@ -114,56 +100,39 @@
                 </div>
             </div>
     
-            <div class="block photos">
+            <div class="block photo">
                 <h3>Фото</h3>
 
-                <div class="block__grid__photos">
+                <div class="block__grid__photo">
 
-                    <div class="photos__grid"> <!-- 11 изображений в виде кирпичей: см. макет -->
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
-                        </div>
-                         
-                        <div class="block__grid__image">
-                            <img src="photo.jpg" alt="" class="block__grid__image__element">
+                    <div class="photo__grid"> <!-- 11 изображений в виде кирпичей: см. макет -->
+
+                        <div class="photo__grid__row">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
                         </div>
 
+                        <div class="photo__grid__row photo__grid__row--offset">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                        </div>
+                         
+                        <div class="photo__grid__row">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                        </div>
+
+                        <div class="photo__grid__row photo__grid__row--offset">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                        </div>
+
+                        <div class="photo__grid__row">
+                            <img src="goust.jpg" alt="" class="photo__grid__item">
+                        </div>
+                       
                 </div>
                      
                     <div>Some text</div> <!-- текст -->
@@ -171,7 +140,7 @@
                 </div>
             </div>
     
-            <div class="block">
+            <div class="block music">
                 <div class="block__grid">
                     
                     <div class="block__grid__image"> <!-- изображение -->
@@ -194,6 +163,6 @@
         </div>
 
     </main>
-    <script src="app.js"></script>
+    
 </body>
 </html>

@@ -6,6 +6,8 @@
 
 :root {
     --body-and-logo-color: #f7e7ce;
+    --container-margin: 5%;
+    --border-red: 1px solid red;
 }
 
 /* ============ BLOCKS ============ */
@@ -40,8 +42,14 @@
     top: 2%;
 }
 
+.container {
+    margin-left: var(--container-margin);
+    margin-right: var(--container-margin);
+}
+
 .block {
     margin-bottom: 200px;
+    border: var(--border-red);
 }
 
 .block__grid {
@@ -50,23 +58,92 @@
     gap: 0.5%;
 }
 
-.block__grid__photos {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    gap: 0.5%;
-}
-
-.photos__grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0.5%;
-}
-
-/* ============ ELEMENTS ============ */
-
 .block__grid__image__element {
     width: 100%;
 }
+
+/* ============ Scroll ============ */
+
+.horizontal-scroll-gallery {
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: relative;
+}
+
+.horizontal-scroll-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery__track {
+    display: flex;
+
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+
+    gap: 0.5%;
+}
+
+.scroll-button {
+    --button-position: 45%;
+    --button-size: 50px;
+
+    position: absolute;
+
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+
+    border: none;
+    border-radius: 50%;
+
+    width: var(--button-size);
+    height: var(--button-size);
+
+    cursor: pointer;
+
+    z-index: 10;
+}
+
+/* ============ Photo ============ */
+
+.block__grid__photo {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 0.5%;
+}
+
+.photo__grid {
+    --photo-width: 30%;
+    --gap: 1%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.photo__grid__row {
+    display: grid;
+    grid-template-columns: repeat(3, var(--photo-width));
+    gap: var(--gap);
+    margin-bottom: var(--gap);
+}
+
+.photo__grid__row--offset {
+    transform: translateX(calc(-0.5 * var(--photo-width) - 0.5 * var(--gap)));
+}
+
+.photo__grid__row:nth-child(3),
+.photo__grid__row:nth-child(5) {
+    grid-template-columns: repeat(2, var(--photo-width));
+}
+
+.photo__grid__row:nth-child(5) {
+    grid-template-columns: var(--photo-width);
+    margin-bottom: 0;
+}
+
+/* ============ ELEMENTS ============ */
 
 .header__logo__element {
     font-size: 400%;
@@ -79,6 +156,30 @@
 
 .car__image__animation {
     animation: car__image__animation 3s linear 0.5s infinite alternate forwards;
+}
+
+/* ============ Scroll ============ */
+
+.gallery__track img {
+    scroll-snap-align: start;
+    width: 50%;
+}
+
+.scroll-button.left {
+    left: var(--button-position);
+}
+
+.scroll-button.right {
+    right: var(--button-position);
+}
+
+/* ============ Photo ============ */
+
+.photo__grid__item {
+    width: 100%;
+    object-fit: cover;
+    /* opacity: 1; */
+    transition: opacity 0.5s transform 0.5s;
 }
 
 /* ============ ANIMATIONS ============ */
