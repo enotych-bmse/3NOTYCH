@@ -88,7 +88,7 @@
 }
 
 .scroll-button {
-    --button-position: 45%;
+    --button-position: 10%;
     --button-size: 50px;
 
     position: absolute;
